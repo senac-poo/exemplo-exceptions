@@ -8,10 +8,9 @@ import banco.Factories.ContaFactory;
 
 public class OperacoesDeInput {
 	Scanner scanner = new Scanner(System.in);
+	ContaFactory contaFactory = new ContaFactory();
 	
 	public Conta operacaoAbreConta() {
-		ContaFactory contaFactory = new ContaFactory();
-		
 		System.out.println("\n-------------------");
 		System.out.println("Qual tipo de conta deseja criar?");
 		System.out.println("(1) CC, (2) CP, (3) CPEspecial");

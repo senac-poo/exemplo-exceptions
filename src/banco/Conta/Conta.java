@@ -16,7 +16,7 @@ public abstract class Conta {
 	}
 	
 	public void debitar(double valor) {
-		this.saldo -= (valor + descontarCPMF(valor));
+		this.saldo -= valor;
 	}
 	
 	public double getSaldo() {
@@ -30,10 +30,6 @@ public abstract class Conta {
 	public int getConta() {
 		return this.conta;
 	}		
-	
-	private double descontarCPMF(double valor) {
-		return valor*0.0025;
-	}
 	
 	public String toString() {
 		return "Ag: " + agencia + ", Conta: " + conta + ", Saldo: " + saldo;
